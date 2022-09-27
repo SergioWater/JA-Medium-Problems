@@ -60,4 +60,12 @@ function reverseString(word){
 }
 console.log(reverseString('abasdcc'))
 
-function 
+function convertToZeros(array){
+    let newArr = []
+    for(let i = 0; i < array.length; i++){
+        newArr[i] = 0
+    }
+    return newArr
+
+}
+console.log(convertToZeros([5,100,0]))
