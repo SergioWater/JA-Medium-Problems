@@ -61,11 +61,47 @@ function reverseString(word){
 console.log(reverseString('abasdcc'))
 
 function convertToZeros(array){
-    let newArr = []
-    for(let i = 0; i < array.length; i++){
-        newArr[i] = 0
-    }
-    return newArr
+ 
+    return array.map(elem => 0)
 
 }
 console.log(convertToZeros([5,100,0]))
+
+function removeApples(array){
+    // let noApple = []
+    // for(let i = 0; i < array.length; i++){
+    //     if(array[i] !== 'Apple'){
+    //         noApple.push(array[i])
+    //     }
+    // }
+    // return noApple
+    return array.filter(elem => elem !== "Apple")
+}
+console.log(removeApples(['Banana','Apple','Orange', 'Apple']))
+
+function filterOutFalsey(array){
+    // return array.filter(elem => !!elem === true)
+    let noFalsey = []
+    for(let i = 0; i < array.length; i++){
+        if(!!array[i] === true){
+            noFalsey.push(array[i])
+        }
+    }
+    return noFalsey
+}
+console.log(filterOutFalsey([0,"asd",[],'[emos']))
+
+function converToBoolean(array){
+    // let converted = []
+    // for(let i = 0; i < array.length; i++){
+    //     if(!!array[i] === true){
+    //         converted.push(true)
+    //     }
+    //     else if(!!array[i] === false){
+    //         converted.push(false)
+    //     }
+    // }
+    // return converted
+    return array.map(elem => !!elem)
+}
+console.log(converToBoolean([500,0,"David","",[]]))
